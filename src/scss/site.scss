@@ -1,5 +1,79 @@
-$font-body: Helvetica, Arial, sans-serif;
+$color-primary-0: #2D3544;	// Main Primary color */
+$color-primary-1: #575F70;
+$color-primary-2: #424B5D;
+$color-primary-3: #202B41;
+$color-primary-4: #15213B;
+
+$color-secondary-1-0: #365234;	// Main Secondary color (1) */
+$color-secondary-1-1: #678765;
+$color-secondary-1-2: #4F714D;
+$color-secondary-1-3: #254E23;
+$color-secondary-1-4: #174715;
+
+$color-secondary-2-0: #3B2C44;	// Main Secondary color (2) */
+$color-secondary-2-1: #665570;
+$color-secondary-2-2: #53415D;
+$color-secondary-2-3: #341E41;
+$color-secondary-2-4: #2D133B;
+
+$font-header-family: "Segoe UI", Helvetica, Arial, sans-serif;
+$font-body-family: Helvetica, Arial, sans-serif;
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
 
 body {
-	font-family: $font-body;
+	font-family: $font-body-family;
+	text-align: center;
 }
+
+h1, h2, h3 {
+	font-family: $font-header-family;
+	font-weight: normal;
+}
+
+body > header {
+	margin: 0;
+	color: white;
+
+	h1 {
+		margin: 0;
+		padding: 20px;
+		background: $color-primary-0;
+
+		color: #000;
+		font-size: 48px;
+		letter-spacing: 10px;
+		text-transform: uppercase;
+		animation: colorspin linear 4000ms infinite;  
+	}
+}
+
+@keyframes colorspin {
+	0%   { text-shadow:  2px -2px 0 red,   1px -1px 0 red,  -2px  2px 0 cyan, -1px  1px 0 cyan }
+	25%  { text-shadow: -2px -2px 0 cyan, -1px -1px 0 cyan,  2px  2px 0 red,   1px  1px 0 red  }
+	50%  { text-shadow: -2px  2px 0 red,  -1px  1px 0 red,   2px -2px 0 cyan,  1px -1px 0 cyan }
+	75%  { text-shadow:  2px  2px 0 cyan,  1px  1px 0 cyan, -2px -2px 0 red,  -1px -1px 0 red  }
+	100% { text-shadow:  2px -2px 0 red,   1px -1px 0 red,  -2px  2px 0 cyan, -1px  1px 0 cyan }  
+}
+
+.header-boxes {
+	display: flex;
+	justify-content: center;
+
+	.box {
+		width: 75px;
+		height: 25px;
+		flex-grow: .1;
+	}
+
+	.box1 { background: $color-primary-1; left: 15px  }
+	.box2 { background: $color-primary-2; left: 100px }
+	.box3 { background: $color-primary-3; left: 185px }
+	.box4 { background: $color-primary-4; left: 270px }
+}
+
+
